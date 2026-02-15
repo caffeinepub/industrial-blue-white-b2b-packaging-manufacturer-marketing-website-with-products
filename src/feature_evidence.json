@@ -1,0 +1,220 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-modern-professional-industrial-and-trustworthy-blue-white-website-theme-and-apply-it-consistently-across-all-sections-typography-spacing-buttons-section-backgrounds-and-icon-style",
+      "featureTitle": "Create a modern, professional, industrial and trustworthy blue/white website theme and apply it consistently across all sections (typography, spacing, buttons, section backgrounds, and icon style).",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-marketing-site-structure-with-a-clear-navigation-header-with-links-and-the-following-sections-homepage-hero-intro-primary-cta-about-us-products-why-choose-us-and-contact-support-smooth-in-page-navigation-to-sections",
+      "featureTitle": "Implement the marketing site structure with a clear navigation (header with links) and the following sections: Homepage (hero + intro + primary CTA), About Us, Products, Why Choose Us, and Contact. Support smooth in-page navigation to sections.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/Footer.tsx",
+        "frontend/src/components/marketing/Header.tsx",
+        "frontend/src/hooks/useScrollToSection.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-homepage-hero-with-a-large-banner-the-exact-tagline-strong-packaging-safe-delivery-trusted-quality-a-short-company-introduction-and-a-clearly-visible-contact-us-button-that-navigates-to-the-contact-section",
+      "featureTitle": "Build the Homepage hero with a large banner, the exact tagline “Strong Packaging. Safe Delivery. Trusted Quality.”, a short company introduction, and a clearly visible “Contact Us” button that navigates to the Contact section.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-about-us-section-describing-the-company-as-reliable-quality-focused-and-a-bulk-supplier-for-b2b-clients-explicitly-mentioning-competitive-pricing-and-timely-delivery",
+      "featureTitle": "Create an About Us section describing the company as reliable, quality-focused, and a bulk supplier for B2B clients, explicitly mentioning competitive pricing and timely delivery.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/sections/AboutSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-products-section-that-lists-and-briefly-describes-these-product-categories-corrugated-boxes-carton-packaging-bubble-wrap-packaging-rolls-custom-printed-packaging",
+      "featureTitle": "Create a Products section that lists and briefly describes these product categories: Corrugated Boxes, Carton Packaging, Bubble Wrap, Packaging Rolls, Custom Printed Packaging.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/sections/ProductsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-why-choose-us-section-highlighting-premium-quality-materials-bulk-supply-capability-on-time-delivery-affordable-pricing",
+      "featureTitle": "Create a “Why Choose Us” section highlighting: Premium Quality Materials, Bulk Supply Capability, On-Time Delivery, Affordable Pricing.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/sections/WhyChooseUsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-contact-section-that-displays-phone-7050223696-email-p1204631-gmail-com-includes-a-simple-contact-form-name-phone-email-message-includes-a-whatsapp-contact-button-and-shows-the-call-to-action-text-contact-us-today-for-bulk-orders-and-custom-packaging-solutions",
+      "featureTitle": "Create a Contact section that displays Phone: 7050223696, Email: p1204631@gmail.com, includes a simple contact form (Name, Phone, Email, Message), includes a WhatsApp contact button, and shows the call-to-action text “Contact us today for bulk orders and custom packaging solutions.”",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/sections/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-wire-the-frontend-contact-form-to-the-backend-submission-api-with-user-feedback-loading-success-and-error-states-and-ensure-form-submission-is-fast-and-does-not-block-the-ui",
+      "featureTitle": "Wire the frontend contact form to the backend submission API with user feedback (loading, success, and error states) and ensure form submission is fast and does not block the UI.",
+      "files": [
+        "frontend/src/components/marketing/sections/ContactSection.tsx",
+        "frontend/src/hooks/useSubmitContact.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-site-is-mobile-friendly-and-fast-loading-responsive-layouts-optimized-images-and-no-unnecessary-heavy-assets-maintain-good-accessibility-for-navigation-and-form-controls",
+      "featureTitle": "Ensure the site is mobile-friendly and fast-loading: responsive layouts, optimized images, and no unnecessary heavy assets. Maintain good accessibility for navigation and form controls.",
+      "files": [
+        "frontend/src/components/marketing/sections/ContactSection.tsx",
+        "frontend/src/components/marketing/sections/HeroSection.tsx",
+        "frontend/src/components/marketing/sections/ProductsSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-seo-optimizations-for-a-single-page-marketing-site-meaningful-page-title-meta-description-semantic-headings-h1-h2-and-open-graph-twitter-meta-tags-appropriate-for-a-packaging-manufacturing-company",
+      "featureTitle": "Add basic SEO optimizations for a single-page marketing site: meaningful page title, meta description, semantic headings (H1/H2), and Open Graph/Twitter meta tags appropriate for a packaging manufacturing company.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/marketing/sections/AboutSection.tsx",
+        "frontend/src/components/marketing/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-generated-static-image-assets-to-support-the-industrial-theme-hero-banner-logo-and-simple-product-category-icons-and-render-them-in-the-ui-from-frontend-public-assets-generated-do-not-serve-images-via-the-backend",
+      "featureTitle": "Add generated static image assets to support the industrial theme (hero banner, logo, and simple product category icons) and render them in the UI from frontend/public/assets/generated (do not serve images via the backend).",
+      "files": [
+        "frontend/src/components/marketing/Header.tsx",
+        "frontend/src/components/marketing/sections/HeroSection.tsx",
+        "frontend/src/components/marketing/sections/ProductsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

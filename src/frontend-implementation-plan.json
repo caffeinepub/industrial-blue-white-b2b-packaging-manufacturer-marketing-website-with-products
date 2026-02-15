@@ -1,0 +1,311 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Industrial blue/white B2B packaging manufacturer single-page marketing site",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a consistent industrial blue/white visual theme (typography, spacing, buttons, section styling, icon style).",
+      "acceptanceCriteria": [
+        "Site uses a consistent blue/white palette with an industrial/business visual style across all pages/sections",
+        "Primary and secondary button styles are consistent and accessible (contrast, hover/focus states)",
+        "Layout looks professional on desktop and mobile (no overlapping or clipped content)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styling foundation for the blue/white industrial theme using Tailwind base layers (CSS variables, typography scale, spacing defaults, focus rings, smooth scrolling)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Tune theme tokens (colors/radius/shadows/typography defaults) to align with the industrial blue/white brand and ensure consistent UI states across the single-page layout."
+        },
+        {
+          "path": "frontend/src/components/marketing/ThemePrimitives.ts",
+          "operation": "create",
+          "description": "Add small theme helper exports (e.g., className constants for section backgrounds, container widths, icon styling) to ensure consistent styling across sections without modifying immutable shadcn/ui files."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build the single-page structure with header navigation, five sections, smooth in-page navigation, and a footer.",
+      "acceptanceCriteria": [
+        "Header navigation links scroll/jump to the correct section (Homepage, About, Products, Why Choose Us, Contact)",
+        "A footer is present with basic company contact details and quick links",
+        "All user-facing text is in English"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main single-page layout composing Header + sections (Home, About, Products, Why Choose Us, Contact) + Footer; wire section ids and ensure all copy is in English."
+        },
+        {
+          "path": "frontend/src/components/marketing/Header.tsx",
+          "operation": "create",
+          "description": "Implement a sticky header with navigation links that trigger smooth scrolling to section anchors; use shadcn-ui Button component for consistent interactive styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/marketing/Footer.tsx",
+          "operation": "create",
+          "description": "Add a footer with basic contact details (phone/email) and quick links that scroll to sections; ensure accessible link/focus styles."
+        },
+        {
+          "path": "frontend/src/hooks/useScrollToSection.ts",
+          "operation": "create",
+          "description": "Add a lightweight hook/utility to scroll and focus the target section (supports smooth scrolling and keyboard accessibility when navigating by header/footer links)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create a hero banner with the exact tagline, short intro, and a prominent Contact Us CTA that scrolls to Contact.",
+      "acceptanceCriteria": [
+        "Hero displays the tagline exactly as provided (same punctuation/capitalization)",
+        "A short intro paragraph is visible above the fold on desktop",
+        "Clicking “Contact Us” moves focus/scroll to the Contact section"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Implement the hero section with the tagline “Strong Packaging. Safe Delivery. Trusted Quality.” exactly, include a short intro paragraph, and a prominent “Contact Us” CTA button that uses the shared scroll-to-section behavior; use shadcn-ui Button for CTA styling consistency. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HeroSection into the top of the single-page layout and ensure the hero section has the correct anchor id for navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add an About Us section with required B2B positioning and explicit mentions (pricing and delivery).",
+      "acceptanceCriteria": [
+        "About Us copy includes: reliability, quality-focused approach, B2B bulk supply, competitive pricing, and timely delivery"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Create About Us section copy that explicitly mentions reliability, quality-focused approach, B2B bulk supply, competitive pricing, and timely delivery; keep layout responsive and aligned with global theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire AboutSection into the single-page layout with a stable anchor id used by header/footer navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create a Products section showing five product categories with short B2B descriptions in a responsive layout.",
+      "acceptanceCriteria": [
+        "All five product categories are shown with clear titles",
+        "Each product has a short descriptive line suitable for B2B buyers",
+        "Products are presented in a responsive grid/list that works on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/sections/ProductsSection.tsx",
+          "operation": "create",
+          "description": "Implement a responsive products grid/list with five categories (Corrugated Boxes, Carton Packaging, Bubble Wrap, Packaging Rolls, Custom Printed Packaging), each with a short B2B-focused description; use shadcn-ui Card for consistent presentation. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ProductsSection into the single-page layout with a stable anchor id."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create a Why Choose Us section highlighting four trust/value points in a mobile-friendly layout.",
+      "acceptanceCriteria": [
+        "All four value points are visible and visually emphasized (e.g., cards or bullet highlights)",
+        "Section remains readable and well-spaced on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/sections/WhyChooseUsSection.tsx",
+          "operation": "create",
+          "description": "Implement four emphasized points (Premium Quality Materials, Bulk Supply Capability, On-Time Delivery, Affordable Pricing) using a responsive card/highlight layout; use shadcn-ui Card for consistent emphasis. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire WhyChooseUsSection into the single-page layout with a stable anchor id."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build the Contact section with exact phone/email, exact CTA text, contact form fields with validation, and a WhatsApp button.",
+      "acceptanceCriteria": [
+        "Phone number and email are displayed exactly as provided",
+        "CTA text is displayed exactly as provided (same punctuation/capitalization)",
+        "Contact form includes fields: Name, Phone, Email, Message, with basic validation and a clear submit button",
+        "WhatsApp button opens a WhatsApp chat using the phone number (e.g., wa.me link)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/sections/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create the Contact section showing Phone: 7050223696 and Email: p1204631@gmail.com exactly, include CTA text “Contact us today for bulk orders and custom packaging solutions.” exactly, render a validated form (Name, Phone, Email, Message) and a WhatsApp button linking to wa.me using the phone number; use shadcn-ui Input/Textarea/Button for accessible controls. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ContactSection into the single-page layout with a stable anchor id; ensure other CTAs (hero/header/footer) can scroll to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Connect the contact form UI to the backend submission capability with non-blocking UX and clear loading/success/error feedback.",
+      "acceptanceCriteria": [
+        "Submitting the form shows a loading state and then a success message on completion",
+        "On success, form fields are cleared",
+        "On backend error, an error message is shown without losing the entered content"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/backendClient.ts",
+          "operation": "create",
+          "description": "Add a small frontend client wrapper for calling the existing backend capability described by frontend/src/backend.d.ts (submitContact) using the project’s core-infrastructure connection patterns; keep it focused on contact submission only."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitContact.ts",
+          "operation": "create",
+          "description": "Implement a React Query mutation hook to submit contact messages asynchronously with loading/success/error state; include mapping strategy to pass Name/Email/Message to submitContact and preserve the Phone field by incorporating it into the submitted message text if needed."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Wire the form submit to useSubmitContact; show non-blocking loading state, success confirmation, and inline error feedback while preserving user input on error; clear fields on success; ensure submit remains fast and keyboard accessible."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Ensure responsive, fast-loading, accessible UI across sections (layout, images, focus states, form controls).",
+      "acceptanceCriteria": [
+        "All sections render properly on common breakpoints (mobile/tablet/desktop)",
+        "Images are served in appropriate sizes and do not cause layout shift (dimensions reserved)",
+        "Interactive elements are keyboard accessible and have visible focus states"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust global responsive defaults (container widths, section spacing, typography scaling) and accessible focus styles; enable smooth scrolling and scroll-margin for anchored sections."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Render the hero banner image with reserved dimensions to avoid layout shift and ensure the hero layout remains readable on small screens."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/ProductsSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the products grid adapts to mobile/tablet/desktop breakpoints and icons render with reserved dimensions for stability."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Ensure form controls have proper labels/aria attributes, visible focus states, and error messaging that is readable and keyboard reachable."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Add basic SEO metadata and semantic headings for the single-page marketing site (title, description, OG/Twitter, H1/H2 structure).",
+      "acceptanceCriteria": [
+        "Document title and meta description are set to relevant business-focused content",
+        "Page uses a single clear H1 and logical H2s for sections",
+        "Open Graph and Twitter meta tags are present with consistent title/description"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add/adjust meta description plus Open Graph and Twitter meta tags appropriate for a packaging manufacturing company; reference generated images for social previews from frontend/public/assets/generated/logo.dim_512x512.png or frontend/public/assets/generated/hero-banner.dim_1920x800.png."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the hero contains the single page H1 (tagline) and that other sections use logical H2 headings for accessibility and SEO."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Ensure About section uses semantic H2 heading and paragraph structure aligned with SEO and accessibility needs."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add generated static images (hero banner, logo, product icons) under frontend/public/assets/generated and render them in the UI.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the UI",
+        "Hero section uses the generated hero banner image without noticeably degrading performance",
+        "Products section uses the generated product icons/illustrations consistently"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-banner.dim_1920x800.png",
+          "operation": "create",
+          "description": "Add the generated industrial packaging hero banner asset to be used by the Hero section."
+        },
+        {
+          "path": "frontend/public/assets/generated/logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated logo asset to be used in the header/footer branding."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-corrugated.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated Corrugated Boxes icon asset for the Products section."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-carton.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated Carton Packaging icon asset for the Products section."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-bubblewrap.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated Bubble Wrap icon asset for the Products section."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-rolls.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated Packaging Rolls icon asset for the Products section."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-custom-printed.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated Custom Printed Packaging icon asset for the Products section."
+        },
+        {
+          "path": "frontend/src/components/marketing/Header.tsx",
+          "operation": "modify",
+          "description": "Render the generated logo from frontend/public/assets/generated/logo.dim_512x512.png in the header branding area with appropriate sizing and alt text."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Render the generated hero banner from frontend/public/assets/generated/hero-banner.dim_1920x800.png with performance-friendly sizing and reserved dimensions."
+        },
+        {
+          "path": "frontend/src/components/marketing/sections/ProductsSection.tsx",
+          "operation": "modify",
+          "description": "Render each product category icon consistently using the generated assets: frontend/public/assets/generated/product-corrugated.dim_512x512.png, frontend/public/assets/generated/product-carton.dim_512x512.png, frontend/public/assets/generated/product-bubblewrap.dim_512x512.png, frontend/public/assets/generated/product-rolls.dim_512x512.png, frontend/public/assets/generated/product-custom-printed.dim_512x512.png."
+        }
+      ]
+    }
+  ]
+}

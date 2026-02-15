@@ -1,0 +1,16 @@
+{
+  "frontend/src/index.css": "Global styles with industrial blue/white OKLCH color system, smooth scrolling, focus states, and utility classes for sections.",
+  "frontend/tailwind.config.js": "Tailwind configuration with industrial blue theme colors, custom shadows, Inter font family, and fade-in animation.",
+  "frontend/index.html": "HTML entry point with SEO meta tags, Open Graph/Twitter cards, and optimized title/description for packaging company.",
+  "frontend/src/App.tsx": "Main application component composing Header, all marketing sections (Hero, About, Products, Why Choose Us, Contact), Footer, and Toaster for notifications.",
+  "frontend/src/hooks/useScrollToSection.ts": "Custom hook providing smooth scroll navigation to section anchors with accessibility focus management.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for fetching all contact messages from backend (for potential future admin use).",
+  "frontend/src/hooks/useSubmitContact.ts": "React Query mutation hook for submitting contact form data to backend, incorporating phone into message field.",
+  "frontend/src/components/marketing/Header.tsx": "Sticky header with logo, desktop/mobile navigation, smooth scroll to sections, and scroll-based styling.",
+  "frontend/src/components/marketing/Footer.tsx": "Footer with company info, quick links, contact details, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/marketing/sections/HeroSection.tsx": "Hero section with exact tagline, company intro, CTA buttons, and hero banner image.",
+  "frontend/src/components/marketing/sections/AboutSection.tsx": "About section describing reliability, quality focus, B2B bulk supply, competitive pricing, and timely delivery with highlights card.",
+  "frontend/src/components/marketing/sections/ProductsSection.tsx": "Products section displaying five product categories in responsive grid with images and B2B-focused descriptions.",
+  "frontend/src/components/marketing/sections/WhyChooseUsSection.tsx": "Why Choose Us section with four value proposition cards featuring icons and descriptions.",
+  "frontend/src/components/marketing/sections/ContactSection.tsx": "Contact section with phone/email display, WhatsApp button, validated contact form with loading/success/error states."
+}

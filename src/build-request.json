@@ -1,0 +1,249 @@
+{
+  "kind": "build_request",
+  "title": "Industrial blue/white B2B packaging manufacturer marketing website with products, trust points, and contact form",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a modern, professional, industrial and trustworthy blue/white website theme and apply it consistently across all sections (typography, spacing, buttons, section backgrounds, and icon style).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "The website should look industrial, trustworthy, and business-oriented with blue and white color theme."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Site uses a consistent blue/white palette with an industrial/business visual style across all pages/sections",
+        "Primary and secondary button styles are consistent and accessible (contrast, hover/focus states)",
+        "Layout looks professional on desktop and mobile (no overlapping or clipped content)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the marketing site structure with a clear navigation (header with links) and the following sections: Homepage (hero + intro + primary CTA), About Us, Products, Why Choose Us, and Contact. Support smooth in-page navigation to sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Include the following sections: Homepage ... About Us ... Products Section ... Why Choose Us ... Contact Section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header navigation links scroll/jump to the correct section (Homepage, About, Products, Why Choose Us, Contact)",
+        "A footer is present with basic company contact details and quick links",
+        "All user-facing text is in English"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Homepage hero with a large banner, the exact tagline “Strong Packaging. Safe Delivery. Trusted Quality.”, a short company introduction, and a clearly visible “Contact Us” button that navigates to the Contact section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Big banner with tagline:\n“Strong Packaging. Safe Delivery. Trusted Quality.”",
+          "Short introduction about the company",
+          "“Contact Us” button clearly visible"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero displays the tagline exactly as provided (same punctuation/capitalization)",
+        "A short intro paragraph is visible above the fold on desktop",
+        "Clicking “Contact Us” moves focus/scroll to the Contact section"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create an About Us section describing the company as reliable, quality-focused, and a bulk supplier for B2B clients, explicitly mentioning competitive pricing and timely delivery.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Describe the company as reliable, quality-focused, and bulk supplier for B2B clients",
+          "Mention competitive pricing and timely delivery"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About Us copy includes: reliability, quality-focused approach, B2B bulk supply, competitive pricing, and timely delivery"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a Products section that lists and briefly describes these product categories: Corrugated Boxes, Carton Packaging, Bubble Wrap, Packaging Rolls, Custom Printed Packaging.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Products Section\nCorrugated Boxes\nCarton Packaging\nBubble Wrap\nPackaging Rolls\nCustom Printed Packaging"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All five product categories are shown with clear titles",
+        "Each product has a short descriptive line suitable for B2B buyers",
+        "Products are presented in a responsive grid/list that works on mobile"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create a “Why Choose Us” section highlighting: Premium Quality Materials, Bulk Supply Capability, On-Time Delivery, Affordable Pricing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Why Choose Us\nPremium Quality Materials\nBulk Supply Capability\nOn-Time Delivery\nAffordable Pricing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four value points are visible and visually emphasized (e.g., cards or bullet highlights)",
+        "Section remains readable and well-spaced on mobile"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a Contact section that displays Phone: 7050223696, Email: p1204631@gmail.com, includes a simple contact form (Name, Phone, Email, Message), includes a WhatsApp contact button, and shows the call-to-action text “Contact us today for bulk orders and custom packaging solutions.”",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Contact Section\nPhone: 7050223696\nEmail: p1204631@gmail.com\nSimple contact form (Name, Phone, Email, Message)\nWhatsApp contact button\nAdd call-to-action text: “Contact us today for bulk orders and custom packaging solutions.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Phone number and email are displayed exactly as provided",
+        "CTA text is displayed exactly as provided (same punctuation/capitalization)",
+        "Contact form includes fields: Name, Phone, Email, Message, with basic validation and a clear submit button",
+        "WhatsApp button opens a WhatsApp chat using the phone number (e.g., wa.me link)"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement backend support to accept contact form submissions and persist them in the canister so submissions are not lost on refresh. Provide a safe, minimal API to create a contact message and optionally list messages for future admin use.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Simple contact form (Name, Phone, Email, Message)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes an update method to submit a contact message containing name, phone, email, and message",
+        "Submitted messages are stored persistently (survive canister calls and page reloads)",
+        "Backend validates that required fields are non-empty and returns an error for invalid submissions"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Wire the frontend contact form to the backend submission API with user feedback (loading, success, and error states) and ensure form submission is fast and does not block the UI.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Simple contact form (Name, Phone, Email, Message)",
+          "The website should be mobile-friendly, fast-loading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Submitting the form shows a loading state and then a success message on completion",
+        "On success, form fields are cleared",
+        "On backend error, an error message is shown without losing the entered content"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Ensure the site is mobile-friendly and fast-loading: responsive layouts, optimized images, and no unnecessary heavy assets. Maintain good accessibility for navigation and form controls.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "The website should be mobile-friendly, fast-loading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All sections render properly on common breakpoints (mobile/tablet/desktop)",
+        "Images are served in appropriate sizes and do not cause layout shift (dimensions reserved)",
+        "Interactive elements are keyboard accessible and have visible focus states"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Add basic SEO optimizations for a single-page marketing site: meaningful page title, meta description, semantic headings (H1/H2), and Open Graph/Twitter meta tags appropriate for a packaging manufacturing company.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "optimized for SEO"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Document title and meta description are set to relevant business-focused content",
+        "Page uses a single clear H1 and logical H2s for sections",
+        "Open Graph and Twitter meta tags are present with consistent title/description"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add generated static image assets to support the industrial theme (hero banner, logo, and simple product category icons) and render them in the UI from frontend/public/assets/generated (do not serve images via the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "The website should look industrial, trustworthy, and business-oriented with blue and white color theme."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the UI",
+        "Hero section uses the generated hero banner image without noticeably degrading performance",
+        "Products section uses the generated product icons/illustrations consistently"
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor in backend/main.mo (no additional backend services).",
+    "Do not modify files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT; compose those components instead.",
+    "Do not add third-party authentication providers; only Internet Identity is supported (not required for this build).",
+    "Do not use external databases or third-party email/SMS services for contact form delivery."
+  ],
+  "nonGoals": [
+    "E-commerce checkout, pricing calculator, inventory management, or online ordering workflow",
+    "Admin dashboard for viewing contact submissions (backend may support listing for future use, but no UI is required unless explicitly requested)",
+    "Multi-language support",
+    "Blog/CMS functionality"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Industrial packaging factory/warehouse hero banner, blue-and-white tones (hero-banner.dim_1920x800.png)",
+      "Simple modern logo mark for a packaging manufacturer, blue-and-white (logo.dim_512x512.png)",
+      "Corrugated box icon/illustration, minimal blue/white (product-corrugated.dim_512x512.png)",
+      "Carton box icon/illustration, minimal blue/white (product-carton.dim_512x512.png)",
+      "Bubble wrap icon/illustration, minimal blue/white (product-bubblewrap.dim_512x512.png)",
+      "Packaging roll icon/illustration, minimal blue/white (product-rolls.dim_512x512.png)",
+      "Custom printed packaging icon/illustration, minimal blue/white (product-custom-printed.dim_512x512.png)"
+    ],
+    "edits": []
+  }
+}

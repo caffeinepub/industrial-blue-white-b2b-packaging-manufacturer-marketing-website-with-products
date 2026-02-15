@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a modern, professional, industrial-themed (blue/white) marketing website for a B2B packaging material manufacturing company, including homepage hero/CTA, company overview, product listings, trust/value propositions, and contact options, with mobile-friendly, fast-loading, SEO-optimized requirements.",
+  "architectural_notes": [
+    "Use blue and white color theme with an industrial, trustworthy, business-oriented visual style",
+    "Optimize for mobile responsiveness (mobile-first)",
+    "Prioritize performance for fast loading (lightweight assets, optimized images)",
+    "Implement basic SEO best practices (semantic HTML, meta tags, headings)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Industrial packaging factory/warehouse hero banner, blue-and-white tones (hero-banner.dim_1920x800.png)\n- Simple modern logo mark for a packaging manufacturer, blue-and-white (logo.dim_512x512.png)\n- Corrugated box icon/illustration, minimal blue/white (product-corrugated.dim_512x512.png)\n- Carton box icon/illustration, minimal blue/white (product-carton.dim_512x512.png)\n- Bubble wrap icon/illustration, minimal blue/white (product-bubblewrap.dim_512x512.png)\n- Packaging roll icon/illustration, minimal blue/white (product-rolls.dim_512x512.png)\n- Custom printed packaging icon/illustration, minimal blue/white (product-custom-printed.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-modern-professional-industrial-and-trustworthy-blue-white-website-theme-and-apply-it-consistently-across-all-sections-typography-spacing-buttons-section-backgrounds-and-icon-style",
+      "title": "Create a modern, professional, industrial and trustworthy blue/white website theme and apply it consistently across all sections (typography, spacing, buttons, section backgrounds, and icon style).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-marketing-site-structure-with-a-clear-navigation-header-with-links-and-the-following-sections-homepage-hero-intro-primary-cta-about-us-products-why-choose-us-and-contact-support-smooth-in-page-navigation-to-sections",
+      "title": "Implement the marketing site structure with a clear navigation (header with links) and the following sections: Homepage (hero + intro + primary CTA), About Us, Products, Why Choose Us, and Contact. Support smooth in-page navigation to sections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-homepage-hero-with-a-large-banner-the-exact-tagline-strong-packaging-safe-delivery-trusted-quality-a-short-company-introduction-and-a-clearly-visible-contact-us-button-that-navigates-to-the-contact-section",
+      "title": "Build the Homepage hero with a large banner, the exact tagline “Strong Packaging. Safe Delivery. Trusted Quality.”, a short company introduction, and a clearly visible “Contact Us” button that navigates to the Contact section.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-about-us-section-describing-the-company-as-reliable-quality-focused-and-a-bulk-supplier-for-b2b-clients-explicitly-mentioning-competitive-pricing-and-timely-delivery",
+      "title": "Create an About Us section describing the company as reliable, quality-focused, and a bulk supplier for B2B clients, explicitly mentioning competitive pricing and timely delivery.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-products-section-that-lists-and-briefly-describes-these-product-categories-corrugated-boxes-carton-packaging-bubble-wrap-packaging-rolls-custom-printed-packaging",
+      "title": "Create a Products section that lists and briefly describes these product categories: Corrugated Boxes, Carton Packaging, Bubble Wrap, Packaging Rolls, Custom Printed Packaging.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-why-choose-us-section-highlighting-premium-quality-materials-bulk-supply-capability-on-time-delivery-affordable-pricing",
+      "title": "Create a “Why Choose Us” section highlighting: Premium Quality Materials, Bulk Supply Capability, On-Time Delivery, Affordable Pricing.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-contact-section-that-displays-phone-7050223696-email-p1204631-gmail-com-includes-a-simple-contact-form-name-phone-email-message-includes-a-whatsapp-contact-button-and-shows-the-call-to-action-text-contact-us-today-for-bulk-orders-and-custom-packaging-solutions",
+      "title": "Create a Contact section that displays Phone: 7050223696, Email: p1204631@gmail.com, includes a simple contact form (Name, Phone, Email, Message), includes a WhatsApp contact button, and shows the call-to-action text “Contact us today for bulk orders and custom packaging solutions.”",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-frontend-contact-form-to-the-backend-submission-api-with-user-feedback-loading-success-and-error-states-and-ensure-form-submission-is-fast-and-does-not-block-the-ui",
+      "title": "Wire the frontend contact form to the backend submission API with user feedback (loading, success, and error states) and ensure form submission is fast and does not block the UI.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-site-is-mobile-friendly-and-fast-loading-responsive-layouts-optimized-images-and-no-unnecessary-heavy-assets-maintain-good-accessibility-for-navigation-and-form-controls",
+      "title": "Ensure the site is mobile-friendly and fast-loading: responsive layouts, optimized images, and no unnecessary heavy assets. Maintain good accessibility for navigation and form controls.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-optimizations-for-a-single-page-marketing-site-meaningful-page-title-meta-description-semantic-headings-h1-h2-and-open-graph-twitter-meta-tags-appropriate-for-a-packaging-manufacturing-company",
+      "title": "Add basic SEO optimizations for a single-page marketing site: meaningful page title, meta description, semantic headings (H1/H2), and Open Graph/Twitter meta tags appropriate for a packaging manufacturing company.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-to-support-the-industrial-theme-hero-banner-logo-and-simple-product-category-icons-and-render-them-in-the-ui-from-frontend-public-assets-generated-do-not-serve-images-via-the-backend",
+      "title": "Add generated static image assets to support the industrial theme (hero banner, logo, and simple product category icons) and render them in the UI from frontend/public/assets/generated (do not serve images via the backend).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Homepage with large hero banner, tagline (“Strong Packaging. Safe Delivery. Trusted Quality.”), short intro, and prominent “Contact Us” button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add About Us section describing reliability, quality focus, B2B bulk supply, competitive pricing, and timely delivery",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add Products section listing Corrugated Boxes, Carton Packaging, Bubble Wrap, Packaging Rolls, and Custom Printed Packaging",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add “Why Choose Us” section with Premium Quality Materials, Bulk Supply Capability, On-Time Delivery, Affordable Pricing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add Contact section with phone (7050223696), email (p1204631@gmail.com), contact form (Name, Phone, Email, Message), WhatsApp button, and CTA text for bulk/custom orders",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Ensure site is mobile-friendly, fast-loading, and SEO-optimized",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Implement backend support to accept contact form submissions and persist them in the canister so submissions are not lost on refresh. Provide a safe, minimal API to create a contact message and optionally list messages for future admin use.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Industrial blue/white B2B packaging manufacturer marketing website with products, trust points, and contact form",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

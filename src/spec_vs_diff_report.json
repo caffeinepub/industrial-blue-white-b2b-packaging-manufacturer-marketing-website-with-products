@@ -1,0 +1,93 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T08:46:58.663Z",
+  "summary": "Most frontend marketing sections (hero/about/products/why-choose-us/contact), navigation, styling, and SEO meta tags appear implemented. However, the backend contact submission API does not match the required schema/validation/persistence, and the required generated image assets are not evidenced in the diff summary. Some extra functionality and attribution were added that were not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-8",
+      "requirement": "Backend update method must accept contact submissions containing name, phone, email, and message; validate required fields non-empty; and persist stored submissions so they survive refresh/reloads.",
+      "reason": "The backend method `submitContact(fullName, email, message)` does not accept a phone field, validates only fullName/email (not message/phone), and stores messages in a non-stable in-memory `let messages = List.empty(...)` which is not persistent across upgrades and is not clearly mutable/persisted.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Wire the frontend contact form to the backend submission API so that the submitted data includes name, phone, email, and message (as separate fields) and backend errors are shown without losing entered content.",
+      "reason": "The frontend mutation explicitly notes the backend only accepts `fullName, email, message` and concatenates phone into the message string (`fullMessage = `Phone: ...`), which does not meet the requirement of submitting a contact message containing separate phone and message fields to the backend API.",
+      "evidence": [
+        "frontend/src/hooks/useSubmitContact.ts",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Add generated static image assets under frontend/public/assets/generated (hero banner, logo, and product icons) and reference them from the UI.",
+      "reason": "The UI references image paths under `/assets/generated/...`, but the diff summary does not include any added files under `frontend/public/assets/generated` (two added files were omitted due to limits, and no paths are shown), so the existence of the required generated assets cannot be verified from the provided diff evidence.",
+      "evidence": [
+        "frontend/src/components/marketing/sections/HeroSection.tsx",
+        "frontend/src/components/marketing/Footer.tsx",
+        "frontend/src/components/marketing/Header.tsx",
+        "frontend/src/components/marketing/sections/ProductsSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added Internet Identity authentication/provider hooks and actor creation logic even though authentication was not required for this build.",
+      "reason": "BuildRequest states Internet Identity is supported but not required; the diff adds a full `InternetIdentityProvider` setup and identity-based actor recreation.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Footer includes a third-party promotional attribution link to caffeine.ai with UTM parameters.",
+      "reason": "Not requested in the BuildRequest and adds external promotional content.",
+      "evidence": [
+        "frontend/src/components/marketing/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Backend adds message listing and sorting APIs by email/timestamp (beyond minimal create/list).",
+      "reason": "Listing is optional, but the specific sorting-by-email/timestamp endpoints and compare module were not requested explicitly.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "WhatsApp link appears to use a hard-coded country-code-prefixed number (917050223696) rather than directly using the provided phone number.",
+      "reason": "Requirement specifies using the provided phone number for the WhatsApp chat link (e.g., wa.me link). The diff shows a different formatted number, which may be unintended/unrequested.",
+      "evidence": [
+        "frontend/src/components/marketing/sections/ContactSection.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/marketing/Footer.tsx",
+    "frontend/src/components/marketing/Header.tsx",
+    "frontend/src/components/marketing/sections/AboutSection.tsx",
+    "frontend/src/components/marketing/sections/ContactSection.tsx",
+    "frontend/src/components/marketing/sections/HeroSection.tsx",
+    "frontend/src/components/marketing/sections/ProductsSection.tsx",
+    "frontend/src/components/marketing/sections/WhyChooseUsSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useScrollToSection.ts",
+    "frontend/src/hooks/useSubmitContact.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
